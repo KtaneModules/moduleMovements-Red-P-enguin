@@ -422,7 +422,7 @@ Transform:
   m_GameObject: {fileID: 1787009591467588}
   m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: -0, z: 0.51}
-  m_LocalScale: {x: 0.18, y: 0.48, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 4849875300072094}
   m_RootOrder: 1
@@ -464,7 +464,7 @@ Transform:
   m_GameObject: {fileID: 1864274988439960}
   m_LocalRotation: {x: 1, y: -0, z: -0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0.5100001}
-  m_LocalScale: {x: 0.18, y: 0.48, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 4954970917716974}
   m_RootOrder: 1
@@ -505,7 +505,7 @@ Transform:
   m_GameObject: {fileID: 1050046341910162}
   m_LocalRotation: {x: 1, y: -0, z: -0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0.5099997}
-  m_LocalScale: {x: 0.18, y: 0.48, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 4695784780128198}
   m_RootOrder: 1
@@ -607,7 +607,7 @@ Transform:
   m_GameObject: {fileID: 1056761710803504}
   m_LocalRotation: {x: 1, y: -0, z: -0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0.5099997}
-  m_LocalScale: {x: 0.18, y: 0.48, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 4262958703997146}
   m_RootOrder: 1
@@ -729,7 +729,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: befbbe5ed54992b4cb28ba6ff3ef70d3, type: 2}
+  - {fileID: 2100000, guid: 4f869779167c7354cbbd03bc56033e99, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -797,7 +797,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: befbbe5ed54992b4cb28ba6ff3ef70d3, type: 2}
+  - {fileID: 2100000, guid: 4f869779167c7354cbbd03bc56033e99, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -933,7 +933,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: befbbe5ed54992b4cb28ba6ff3ef70d3, type: 2}
+  - {fileID: 2100000, guid: 4f869779167c7354cbbd03bc56033e99, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1035,7 +1035,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: befbbe5ed54992b4cb28ba6ff3ef70d3, type: 2}
+  - {fileID: 2100000, guid: 4f869779167c7354cbbd03bc56033e99, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1212,9 +1212,9 @@ TextMesh:
   m_Alignment: 1
   m_TabSize: 4
   m_FontSize: 72
-  m_FontStyle: 0
+  m_FontStyle: 1
   m_RichText: 1
-  m_Font: {fileID: 12800000, guid: 11aebcf17674647408ceb7bf6c45516e, type: 3}
+  m_Font: {fileID: 12800000, guid: bf626a94018c26d4186f187424fb8ab1, type: 3}
   m_Color:
     serializedVersion: 2
     rgba: 4278190080
@@ -1233,9 +1233,9 @@ TextMesh:
   m_Alignment: 1
   m_TabSize: 4
   m_FontSize: 72
-  m_FontStyle: 0
+  m_FontStyle: 1
   m_RichText: 1
-  m_Font: {fileID: 12800000, guid: 11aebcf17674647408ceb7bf6c45516e, type: 3}
+  m_Font: {fileID: 12800000, guid: bf626a94018c26d4186f187424fb8ab1, type: 3}
   m_Color:
     serializedVersion: 2
     rgba: 4278190080
@@ -1254,9 +1254,9 @@ TextMesh:
   m_Alignment: 1
   m_TabSize: 4
   m_FontSize: 72
-  m_FontStyle: 0
+  m_FontStyle: 1
   m_RichText: 1
-  m_Font: {fileID: 12800000, guid: 11aebcf17674647408ceb7bf6c45516e, type: 3}
+  m_Font: {fileID: 12800000, guid: bf626a94018c26d4186f187424fb8ab1, type: 3}
   m_Color:
     serializedVersion: 2
     rgba: 4278190080
@@ -1275,9 +1275,9 @@ TextMesh:
   m_Alignment: 1
   m_TabSize: 4
   m_FontSize: 72
-  m_FontStyle: 0
+  m_FontStyle: 1
   m_RichText: 1
-  m_Font: {fileID: 12800000, guid: 11aebcf17674647408ceb7bf6c45516e, type: 3}
+  m_Font: {fileID: 12800000, guid: bf626a94018c26d4186f187424fb8ab1, type: 3}
   m_Color:
     serializedVersion: 2
     rgba: 4278190080
@@ -1688,7 +1688,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bomb: {fileID: 114802099933236668}
-  audio: {fileID: 0}
+  audio: {fileID: 114915792426800456}
   buttons:
   - {fileID: 114106873094049532}
   - {fileID: 114268728320669012}
@@ -1763,7 +1763,7 @@ MonoBehaviour:
   - Yahtzee
   display: {fileID: 212134674232028338}
   sprites:
-  - {fileID: 21300000, guid: 380931b54b501574cbad226d29dc6694, type: 3}
+  - {fileID: 21300000, guid: 7a1dcf18bb6853643a118625355e335f, type: 3}
   - {fileID: 21300000, guid: 37399dfbf7ff4c24f83162094e9bbcbb, type: 3}
   - {fileID: 21300000, guid: b89f276dd3cfe1449b48a6fe959ff042, type: 3}
   - {fileID: 21300000, guid: 030964df1e334814baecfc932dd6d7da, type: 3}
@@ -1782,9 +1782,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: b685db7f7952260439ce8308857c1abc, type: 3}
   - {fileID: 21300000, guid: a8084691c0505744883332b9c4999caa, type: 3}
   - {fileID: 21300000, guid: d04469dee836f7a468a88e4349df5dfd, type: 3}
-  - {fileID: 21300000, guid: 2dd4ff4abe92b8c45baeaae0ce15550c, type: 3}
   - {fileID: 21300000, guid: 6fa5a5b74f2b97742af535c04fde6b6b, type: 3}
   - {fileID: 21300000, guid: 1f29db3a3b5855e40982b1a3644dc7ce, type: 3}
+  - {fileID: 21300000, guid: 2dd4ff4abe92b8c45baeaae0ce15550c, type: 3}
   - {fileID: 21300000, guid: 021f4ff96cdea0944ab011979264377a, type: 3}
   buttonText:
   - {fileID: 102689195918512746}
@@ -1869,12 +1869,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: deca0404d151e484fa807e1fc605b975, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 4.44, y: 4.44}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 11aebcf17674647408ceb7bf6c45516e
+guid: bf626a94018c26d4186f187424fb8ab1
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -8,9 +8,9 @@ TrueTypeFontImporter:
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontName: Fascinate
+  fontName: HammersmithOne
   fontNames:
-  - Fascinate
+  - HammersmithOne
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0

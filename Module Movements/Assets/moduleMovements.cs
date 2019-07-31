@@ -9,7 +9,7 @@ public class moduleMovements : MonoBehaviour
     public KMBombInfo bomb;
     public KMAudio audio;
 
-    static int ModuleIdCounter = 0;
+    static int ModuleIdCounter = 1;
     int ModuleId;
     private bool moduleSolved = false;
     private bool incorrect = false;
@@ -191,6 +191,10 @@ public class moduleMovements : MonoBehaviour
     void correctGenerator()
     {
         index = UnityEngine.Random.Range(0, 20);
+        if (indexTracker.Contains(index))
+        {
+            correctGenerator();
+        }
         for (int i = 0; i < 10; i++)
         {
             if (selMovements[moduleNum, i] != index)
@@ -335,6 +339,7 @@ public class moduleMovements : MonoBehaviour
             {
                 stageNumber++;
                 DebugMsg("Correct button. Moving to next stage...");
+                textNumber = 1;
                 init();
             }
             else
@@ -359,12 +364,12 @@ public class moduleMovements : MonoBehaviour
         }
     }
 
-    public string TwitchHelpMessage = "Use !{0} press 1 to press the first button. Buttons are labeled in reading order. Use !{0} text to see the text of the buttons in the chat.";
+    public string TwitchHelpMessage = "Use !{0} p|pos|position|press 1 to press the first button. Use !{0} l|lab|label twitch to press the button with the label Twitch. Use !{0} text to see the text of the buttons in the chat.";
     IEnumerator ProcessTwitchCommand(string cmd)
     {
         var parts = cmd.ToLowerInvariant().Split(new[] { ' ' });
 
-        if (parts.Length == 2 && parts[0] == "press" && parts[1].Length == 1)
+        if (parts.Length == 2 && parts[0] == "pos" || parts[0] == "p" || parts[0] == "position" || parts[0] == "press" && parts[1].Length == 1)
         {
             if (parts[1] == "1")
             {
@@ -387,9 +392,21 @@ public class moduleMovements : MonoBehaviour
                 buttonPressed(buttons[3]);
             }
         }
+        else if (parts.Length == 2 && parts[0] == "lab" || parts[0] == "l" || parts[0] == "label" && parts[1].Length == 1)
+        {
+            for (int i = 0; i < 4; i++)
+            {
+                if (buttonText[i].text.ToLower() == parts[1])
+                {
+                    yield return null;
+                    buttonPressed(buttons[i]);
+                    i = 4;
+                }
+            }
+        }
         else if (parts.Length == 1 && parts[0] == "text")
         {
-            yield return "sendtochat The words are " + text[indexTracker[0]] + ", " + text[indexTracker[1]] + ", " + text[indexTracker[2]] + ", " + text[indexTracker[3]] + ".";
+            yield return "sendtochat The words are " + buttonText[0].text + ", " + buttonText[1].text + ", " + buttonText[2].text + ", " + buttonText[3].text + ".";
         }
         else
         {
@@ -398,7 +415,7 @@ public class moduleMovements : MonoBehaviour
     }
 
     void DebugMsg(string msg)
-{
-    Debug.LogFormat("[Module Movements #{0}] {1}", ModuleId, msg);
-}
+    {
+        Debug.LogFormat("[Module Movements #{0}] {1}", ModuleId, msg);
+    }
 }

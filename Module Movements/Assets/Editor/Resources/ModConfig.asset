@@ -16,7 +16,7 @@ MonoBehaviour:
   author: Red Penguin
   description: "==\nDon\u2019t twitch while solving this, one wrong movement and you
     may play yourself.\n\nModule Name: Module Movements\nModule ID: moduleMovements\n\nManual:
-    coming soon\n\nZoom mod recommended.\n=="
+    coming soon\n\nCamera zoom mod recommended.\n=="
   version: 1
   outputFolder: build
   previewImage: {fileID: 2800000, guid: fc59b9d0c0f322243b4f6d7e5aca78ce, type: 3}
