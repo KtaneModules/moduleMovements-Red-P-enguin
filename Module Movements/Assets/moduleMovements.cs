@@ -195,34 +195,37 @@ public class moduleMovements : MonoBehaviour
         {
             correctGenerator();
         }
-        for (int i = 0; i < 10; i++)
+        else
         {
-            if (selMovements[moduleNum, i] != index)
+            for (int i = 0; i < 10; i++)
             {
-                if (i >= 9)
+                if (selMovements[moduleNum, i] == index)
                 {
-                    i = 10;
-                    indexTracker.Add(index);
+                    correctGenerator();
+                }
+                else
+                {
+                    if(i >= 9)
+                    {
+                        i = 10;
+                        indexTracker.Add(index);
+                        if (whichIsForbidden == false)
+                        {
+                            whichIsForbidden = true;
+                            DebugMsg("The correct button is " + text[index] + ".");
+                            forbiddenGenerator();
+                        }
+                        else if (indexTracker.Count < 4)
+                        {
+                            correctGenerator();
+                        }
+                        else if (indexTracker.Count == 4)
+                        {
+                            selectCorButton();
+                        }
+                    }
                 }
             }
-            else
-            {
-                correctGenerator();
-            }
-        }
-        if (whichIsForbidden == false)
-        {
-            whichIsForbidden = true;
-            DebugMsg("The correct button is " + text[index] + ".");
-            forbiddenGenerator();
-        }
-        else if (indexTracker.Count < 4)
-        {
-            correctGenerator();
-        }
-        else if (indexTracker.Count == 4)
-        {
-            selectCorButton();
         }
     }
 
@@ -297,7 +300,7 @@ public class moduleMovements : MonoBehaviour
             solvedTracker.Add(solvedIndex);
             buttonText[index].text = solvedText[solvedIndex];
             textNumber++;
-            if (textNumber < 4)
+            if (textNumber < 5)
             {
                 solvedTextSelector();
             }
@@ -344,7 +347,7 @@ public class moduleMovements : MonoBehaviour
             }
             else
             {
-                textNumber = 0;
+                textNumber = 1;
                 DebugMsg("Correct button. Module solved!");
                 moduleSolved = true;
                 GetComponent<KMBombModule>().HandlePass();
@@ -374,32 +377,32 @@ public class moduleMovements : MonoBehaviour
             if (parts[1] == "1")
             {
                 yield return null;
-                buttonPressed(buttons[0]);
+                yield return new KMSelectable[] { buttons[0] };
             }
             else if (parts[1] == "2")
             {
                 yield return null;
-                buttonPressed(buttons[1]);
+                yield return new KMSelectable[] { buttons[1] };
             }
             else if (parts[1] == "3")
             {
                 yield return null;
-                buttonPressed(buttons[2]);
+                yield return new KMSelectable[] { buttons[2] };
             }
             else if (parts[1] == "4")
             {
                 yield return null;
-                buttonPressed(buttons[3]);
+                yield return new KMSelectable[] { buttons[3] };
             }
         }
-        else if (parts.Length == 2 && parts[0] == "lab" || parts[0] == "l" || parts[0] == "label" && parts[1].Length == 1)
+        else if (parts.Length == 2 && parts[0] == "lab" || parts[0] == "l" || parts[0] == "label")
         {
             for (int i = 0; i < 4; i++)
             {
                 if (buttonText[i].text.ToLower() == parts[1])
                 {
                     yield return null;
-                    buttonPressed(buttons[i]);
+                    yield return new KMSelectable[] { buttons[i] };
                     i = 4;
                 }
             }
